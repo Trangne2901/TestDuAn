@@ -2,8 +2,12 @@ package com.example.duan;
 
 import Entity.Order;
 import javafx.fxml.FXML;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
+import javafx.scene.control.ButtonType;
 import javafx.scene.control.Label;
+
+import java.util.Optional;
 
 public class OrderItemController {
 
@@ -38,35 +42,40 @@ public class OrderItemController {
         totalAmountLabel.setText("Tổng tiền: $" + order.getTotalAmount());
         // Cập nhật trạng thái nút nếu cần
 
-//
-//        boolean isPending = "Chưa thanh toán".equals(order.getStatus());
-//        paidButton.setDisable(!isPending);
-//        cancelButton.setDisable(!isPending);
 
     }
 
     private void handlePaidAction() {
         // Xử lý hành động khi nút "Đã thanh toán" được nhấn
         if (order != null) {
-            order.setStatus("Đã thanh toán");
-            System.out.println("Đã thanh toán");
-            updateButtonStatus();
+            Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+            alert.setTitle("Xác nhận");
+            alert.setHeaderText(null);
+            alert.setContentText("Bạn có chắc chắn muốn chuyển trạng thái đơn hàng thành Đã thanh toán?");
+
+            Optional<ButtonType> result = alert.showAndWait();
+            if (result.isPresent() && result.get() == ButtonType.OK) {
+                order.setStatus("Đã thanh toán");
+                updateButtonStatus();
+            }
+
         }
     }
 
     private void handleCancelAction() {
-        // Xử lý hành động khi nút "Hủy đơn" được nhấn
         if (order != null) {
-            order.setStatus("Hủy đơn");
-            System.out.println("Hủy đơn");
-            updateButtonStatus();
+            Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+            alert.setTitle("Xác nhận");
+            alert.setHeaderText(null);
+            alert.setContentText("Bạn có chắc chắn muốn chuyển trạng thái đơn hàng thành Hủy đơn?");
+
+            Optional<ButtonType> result = alert.showAndWait();
+            if (result.isPresent() && result.get() == ButtonType.OK) {
+                order.setStatus("Hủy đơn");
+                updateButtonStatus();
+            }
         }
     }
-
-
-
-
-
     private void updateButtonStatus() {
         if (order != null) {
             switch (order.getStatus()) {
@@ -84,5 +93,6 @@ public class OrderItemController {
             cancelButton.setDisable(false);
         }
     }
-
 }
+
+

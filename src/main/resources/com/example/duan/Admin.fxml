@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17.0.2-ea" fx:controller="com.example.duan.AdminController">
+    <VBox prefHeight="571.0" prefWidth="558.0" spacing="10">
+        <padding>
+            <Insets bottom="10" left="10" right="10" top="10" />
+        </padding>
+        <Label contentDisplay="CENTER" style="-fx-font-size: 24px; -fx-font-weight: bold;" text="Quản Lý Sản Phẩm" />
+        <Button onAction="#handleAddProduct" text="Thêm Sản Phẩm" />
+        <Button onAction="#handleViewOrders" text="Xem Đơn Hàng" />
+        <Button onAction="#handleManageUsers" text="Quản Lý Người Dùng" />
+        <TableView fx:id="productTable" prefHeight="400">
+            <columns>
+                <TableColumn prefWidth="115.99998188018799" text="Tên Sản Phẩm" />
+                <TableColumn prefWidth="79.66669464111328" text="Giá" />
+                <TableColumn prefWidth="76.33332824707031" text="Số Lượng" />
+                <TableColumn prefWidth="92.33331298828125" text="Hành Động" />
+            </columns>
+        </TableView>
+    </VBox>
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+   </rowConstraints>
+</GridPane>

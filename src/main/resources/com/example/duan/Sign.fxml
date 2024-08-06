@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.image.ImageView?>
+<VBox alignment="CENTER" prefHeight="700.0" prefWidth="600.0" spacing="10.0" style="-fx-background-color: #fac9cf"
+      xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17.0.2-ea"
+      fx:controller="com.example.duan.Sign">
+    <Label style="-fx-font-size: 50px" text="Sign Up"/>
+    <HBox alignment="CENTER">
+        <VBox alignment="CENTER_LEFT">
+            <Label style="-fx-padding: 5px;" text="FullName"/>
+            <TextField fx:id="FullName" prefHeight="81.0" promptText="Full Name"
+                       style="-fx-font-size: 15px;-fx-background-radius: 20;-fx-border-radius: 20;-fx-pref-width: 300px;-fx-pref-height: 40px"/>
+        </VBox>
+    </HBox>
+    <HBox alignment="CENTER">
+        <VBox alignment="CENTER_LEFT">
+            <Label style="-fx-padding: 5px;" text="Email"/>
+            <TextField fx:id="Email" promptText="Email"
+                       style="-fx-font-size: 15px;-fx-background-radius: 20;-fx-border-radius: 20;-fx-pref-width: 300px;-fx-pref-height: 40px"/>
+        </VBox>
+    </HBox>
+    <HBox alignment="CENTER">
+        <VBox alignment="CENTER_LEFT">
+            <Label style="-fx-padding: 5px;" text="SĐT"/>
+            <TextField fx:id="PhoneNumber" promptText="Email"
+                       style="-fx-font-size: 15px;-fx-background-radius: 20;-fx-border-radius: 20;-fx-pref-width: 300px;-fx-pref-height: 40px"/>
+        </VBox>
+    </HBox>
+    <HBox alignment="CENTER">
+        <VBox alignment="CENTER_LEFT">
+            <Label style="-fx-padding: 5px;" text="Password"/>
+            <PasswordField fx:id="Password" promptText="Password"
+                           style="-fx-font-size: 15px;-fx-background-radius: 20;-fx-border-radius: 20;-fx-pref-width: 300px;-fx-pref-height: 40px"/>
+        </VBox>
+    </HBox>
+    <HBox alignment="CENTER">
+        <VBox alignment="CENTER_LEFT">
+            <Label style="-fx-padding: 5px;" text="Confirm password"/>
+            <PasswordField fx:id="ConfirmPassword" promptText="Confirm password"
+                           style="-fx-font-size: 15px;-fx-background-radius: 20;-fx-border-radius: 20;-fx-pref-width: 300px;-fx-pref-height: 40px"/>
+        </VBox>
+    </HBox>
+    <Label text="........................................................................"/>
+    <Button fx:id="signButton"
+            style="-fx-font-size: 15px;-fx-background-radius: 20;-fx-border-radius: 20;-fx-pref-width: 300px;-fx-pref-height: 40px;-fx-background-color: #560856;-fx-text-fill: white"
+            text="Sign-Up"/>
+    <Button fx:id="backButton"
+            style="-fx-font-size: 15px;-fx-background-radius: 20;-fx-border-radius: 20;-fx-pref-width: 300px;-fx-pref-height: 40px;-fx-background-color: #560856;-fx-text-fill: white"
+            text="Back to Login"/>
+</VBox>

@@ -1,0 +1,14 @@
+/*nut{*/
+/*    -fx-background-color: green;*/
+/*}*/
+/*.chinh{*/
+/*    -fx-background-image: url("https://khoinguonsangtao.vn/wp-content/uploads/2022/09/anh-nen-cay-xanh-dep-nhat-cho-may-tinh.jpg");*/
+/*    -fx-background-size: cover;*/
+/*    -fx-background-repeat: no-repeat;*/
+/*    -fx-background-position: center center;*/
+.text-field {
+     -fx-background-color: transparent;
+     -fx-border-width: 0;
+     -fx-padding: 0;
+     -fx-background-insets: 0;
+ }
